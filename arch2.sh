@@ -31,9 +31,6 @@ grub-install /dev/sda
 echo 'Обновляем grub.cfg'
 grub-mkconfig -o /boot/grub/grub.cfg
 
-echo 'Ставим программу для Wi-fi'
-pacman -S dialog wpa_supplicant --noconfirm 
-
 echo 'Добавляем пользователя'
 useradd -m -g users -G wheel -s /bin/bash $username
 
